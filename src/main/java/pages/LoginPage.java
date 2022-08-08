@@ -12,11 +12,11 @@ public class LoginPage {
 		this.driver = driver;
 	}
 
-	public void loginToApplication() {
+	public void loginToApplication(String username, String password) {
 		
-		driver.findElement(By.xpath("//*[@id='userid']")).sendKeys("DAA677");
+		driver.findElement(By.xpath("//*[@id='userid']")).sendKeys(username);
 
-		driver.findElement(By.xpath("//*[@id='password']")).sendKeys("Velocity@123");
+		driver.findElement(By.xpath("//*[@id='password']")).sendKeys(password);
 
 		driver.findElement(By.xpath("//*[@type='submit']")).click();
 	}

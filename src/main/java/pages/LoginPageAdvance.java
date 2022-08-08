@@ -28,10 +28,10 @@ public class LoginPageAdvance {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void loginToApplication() {
-		username.sendKeys("DAA677");
+	public void loginToApplication(String uname, String pwd) {
+		username.sendKeys(uname);
 
-		password.sendKeys("Velocity@123");
+		password.sendKeys(pwd);
 
 		loginbutton.click();
 	}
@@ -42,10 +42,13 @@ public class LoginPageAdvance {
 		loginbutton.click();
 	}
 
-	public void titleOfPage() {
+	public String titleOfPage() {
 		String title = driver.getTitle();
 
 		System.out.println(title);
+		
+		return title;
+				
 	}
 
 }
