@@ -2,6 +2,7 @@ package testcases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
@@ -26,9 +27,20 @@ public class BaseTest {
 	
 		
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
 		
-		driver.manage().window().maximize();
+		ChromeOptions options = new ChromeOptions();
+		
+		options.addArguments("--disable-notification");
+//		
+		options.addArguments("--start-maximized");
+//		
+//		options.addArguments("--incognito");
+		
+		options.addArguments("--headless");
+		
+		driver = new ChromeDriver(options);
+		
+//		driver.manage().window().maximize();
 		
 		driver.get("https://kite.zerodha.com/");
 		}
