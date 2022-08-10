@@ -10,16 +10,16 @@ import org.openqa.selenium.support.PageFactory;
 public class DashboardPage {
 	
 	@FindBy(xpath = "//*[@type='button']")
-	WebElement getstartedbutton;
+	private WebElement getstartedbutton;
 
 	@FindBy(xpath = "(//*[@type='text'])[2]")
-	WebElement searchbox;
+	private WebElement searchbox;
 
 	@FindBy(xpath = "//*[@class='eight columns text-right']//*[@class='button-outline button-blue']")
-	WebElement buybutton;
+	private WebElement buybutton;
 
 	@FindBy(xpath = "//*[@type='submit']")
-	WebElement finalbuybutton;
+	private WebElement finalbuybutton;
 
 	WebDriver driver;
 

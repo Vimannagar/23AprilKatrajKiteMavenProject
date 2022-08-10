@@ -17,9 +17,9 @@ public class BaseTest {
 	public static WebDriver driver;
 	
 	LoginPage lp;
-	LoginPageAdvance lpa;
+public	LoginPageAdvance lpa;
 	
-	DashboardPage dp;
+public	DashboardPage dp;
 	@BeforeSuite
 	public void initBrowser()
 	{
@@ -30,13 +30,13 @@ public class BaseTest {
 		
 		ChromeOptions options = new ChromeOptions();
 		
-		options.addArguments("--disable-notification");
+		options.addArguments("--disable-notifications");
 //		
 		options.addArguments("--start-maximized");
 //		
 //		options.addArguments("--incognito");
 		
-		options.addArguments("--headless");
+//		options.addArguments("--headless");
 		
 		driver = new ChromeDriver(options);
 		
