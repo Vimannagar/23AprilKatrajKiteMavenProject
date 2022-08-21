@@ -1,5 +1,7 @@
 package testcases;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -47,7 +49,7 @@ public	DashboardPage dp;
 	
 	
 	@BeforeClass
-	public void createObject()
+	public void createObject() throws IOException
 	{
 		 lp = new LoginPage(driver);
 		 
